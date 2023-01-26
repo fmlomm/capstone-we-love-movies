@@ -9,7 +9,7 @@ const {
 module.exports = {
   development: {
     client: "postgresql",
-    connection: DATABASE_URL,
+    connection: process.env.DEVELOPMENT_DATABASE_URL,
     pool: { min: 0, max: 5 },
     migrations: {
       directory: path.join(__dirname, "src", "db", "migrations"),
